@@ -4,11 +4,11 @@ const app=express();
 const router=express.Router();
 
 	app.use(device.capture());
-	app.use("/aswinkumar",express.static("./images"))
+	app.use("/aswinkumar",express.static("https://github.com/aswinkumarbaskar/device-dettctor"))
 router.get("/login",(req,res)=>{
 	if(req.device.type=="desktop")
 	{
-		res.sendFile("C:/Users/Suganya/AppData/Roaming/Sublime Text 3/Packages/User/node/express/aSAMPLES/index.html");
+		res.sendFile("index.html");
 	}
 	else
 	{

@@ -2,6 +2,7 @@ const express=require("express");
 const device=require("express-device");
 const app=express();
 const router=express.Router();
+const port=process.env.PORT || 3000;
 
 	app.use(device.capture());
 router.get("/login",(req,res)=>{
@@ -20,6 +21,6 @@ router.get("/logout",(req,res)=>{
 });
 
 app.use("/aswinkumar",router);
-app.listen(3000,()=>{
+app.listen(port,()=>{
 console.log("server running....!");
 });

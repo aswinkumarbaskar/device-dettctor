@@ -12,7 +12,7 @@ router.get("/login",(req,res)=>{
 	}
 	else
 	{
-		res.sendFile("Welcome to  view my website in Mobile");	
+		res.send("Welcome to  view my website in Mobile");	
 	}
 });
 

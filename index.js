@@ -4,15 +4,14 @@ const app=express();
 const router=express.Router();
 
 	app.use(device.capture());
-	app.use("/aswinkumar",express.static("https://github.com/aswinkumarbaskar/device-dettctor"))
 router.get("/login",(req,res)=>{
 	if(req.device.type=="desktop")
 	{
-		res.sendFile("index.html");
+		res.send("welcome to view my website desktop site");
 	}
 	else
 	{
-		res.sendFile("C:/Users/Suganya/AppData/Roaming/Sublime Text 3/Packages/User/node/express/aSAMPLES/images/index.html");	
+		res.sendFile("Welcome to  view my website in Mobile");	
 	}
 });
 
@@ -21,6 +20,6 @@ router.get("/logout",(req,res)=>{
 });
 
 app.use("/aswinkumar",router);
-app.listen(8080,()=>{
+app.listen(3000,()=>{
 console.log("server running....!");
 });

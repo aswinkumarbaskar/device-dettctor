@@ -5,7 +5,7 @@ const router=express.Router();
 const port=process.env.PORT || 3000;
 
 	app.use(device.capture());
-router.get("/login",(req,res)=>{
+router.post("/login",(req,res)=>{
 	if(req.device.type=="desktop")
 	{
 		res.send("welcome to view my website desktop site");
